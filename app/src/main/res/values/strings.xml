@@ -1,0 +1,7 @@
+<resources>
+  <string name="app_name">Up Navigation Sample</string>
+  <string name="action_about">Open Github</string>
+  <string name="text_open_item_details_screen">Open Item Details Screen</string>
+  <string name="text_open_item_collection_screen">Open Item Collection Screen</string>
+  <string name="github_project_url">https://github.com/amatkivskiy/complex-up-navigation</string>
+</resources>
