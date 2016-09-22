@@ -19,11 +19,11 @@
     </activity>
 
     <activity
-      android:name=".ItemCollectionActivity"
+      android:name=".ContentCollectionActivity"
       android:theme="@style/AppTheme.NoActionBar" />
 
     <activity
-      android:name=".ItemDetailsActivity"
+      android:name=".ContentDetailsActivity"
       android:theme="@style/AppTheme.NoActionBar" />
 
   </application>

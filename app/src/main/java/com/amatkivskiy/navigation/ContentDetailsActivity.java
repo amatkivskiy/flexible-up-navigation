@@ -13,12 +13,12 @@ import com.amatkivskiy.navigation.intent.Referrers;
 import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 import static android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP;
 
-public class ItemDetailsActivity extends AppCompatActivity {
+public class ContentDetailsActivity extends AppCompatActivity {
 
     public static final String CONTENT_ID = "content_id";
 
     public static Intent createIntent(Context context, int contentId, Class<?> referrer) {
-        Intent intent = new Intent(context, ItemDetailsActivity.class);
+        Intent intent = new Intent(context, ContentDetailsActivity.class);
         intent.putExtra(CONTENT_ID, contentId);
 
         Referrers.putReferrer(intent, referrer);
@@ -48,8 +48,8 @@ public class ItemDetailsActivity extends AppCompatActivity {
         });
 
         this.findViewById(R.id.button_item_collection)
-            .setOnClickListener(view -> this.startActivity(ItemCollectionActivity.createIntent(ItemDetailsActivity.this,
-                                                                                               ItemDetailsActivity.class)));
+            .setOnClickListener(view -> this.startActivity(ContentCollectionActivity.createIntent(ContentDetailsActivity.this,
+                                                                                                  ContentDetailsActivity.class)));
     }
 
     @Override public boolean onOptionsItemSelected(MenuItem item) {
@@ -72,7 +72,7 @@ public class ItemDetailsActivity extends AppCompatActivity {
             this.startActivity(intent);
         } else {
             // If ItemDetailsActivity was open for example from the notification then create back stack manually.
-            Intent collectionsIntent = ItemCollectionActivity.createIntent(this, null);
+            Intent collectionsIntent = ContentCollectionActivity.createIntent(this, null);
             Intent mainActivityIntent = new Intent(this, MainActivity.class);
 
             TaskStackBuilder.create(this)

@@ -21,19 +21,19 @@ public class MainActivity extends TraceActivity {
         this.setSupportActionBar(toolbar);
 
         this.findViewById(R.id.button_item_collection)
-            .setOnClickListener(view -> startActivity(ItemCollectionActivity.createIntent(MainActivity.this,
-                                                                                          MainActivity.class)));
+            .setOnClickListener(view -> startActivity(ContentCollectionActivity.createIntent(MainActivity.this,
+                                                                                             MainActivity.class)));
 
         this.findViewById(R.id.button_item_details)
-            .setOnClickListener(view -> startActivity(ItemDetailsActivity.createIntent(MainActivity.this,
-                                                                                       1,
-                                                                                       MainActivity.class)));
+            .setOnClickListener(view -> startActivity(ContentDetailsActivity.createIntent(MainActivity.this,
+                                                                                          1,
+                                                                                          MainActivity.class)));
 
         this.findViewById(R.id.button_start_notification)
             .setOnClickListener(view -> {
 
                 // Simple use case for opening specific details screen without back stack.
-                Intent detailsIntent = ItemDetailsActivity.createIntent(this, -5, null);
+                Intent detailsIntent = ContentDetailsActivity.createIntent(this, -5, null);
 
                 PendingIntent pendingIntent =
                         PendingIntent.getActivity(this, 0, detailsIntent, PendingIntent.FLAG_UPDATE_CURRENT);

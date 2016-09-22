@@ -8,10 +8,10 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import com.amatkivskiy.navigation.intent.Referrers;
 
-public class ItemCollectionActivity extends TraceActivity {
+public class ContentCollectionActivity extends TraceActivity {
 
     public static Intent createIntent(Context context, Class<?> referrer) {
-        return Referrers.putReferrer(new Intent(context, ItemCollectionActivity.class), referrer);
+        return Referrers.putReferrer(new Intent(context, ContentCollectionActivity.class), referrer);
     }
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,10 @@ public class ItemCollectionActivity extends TraceActivity {
         this.getSupportActionBar()
             .setDisplayHomeAsUpEnabled(true);
 
-        this.findViewById(R.id.button_item_details).setOnClickListener(view -> startActivity(ItemDetailsActivity.createIntent(
+        this.findViewById(R.id.button_item_details).setOnClickListener(view -> startActivity(ContentDetailsActivity.createIntent(
                 view.getContext(),
                 1,
-                ItemCollectionActivity.class)));
+                ContentCollectionActivity.class)));
 
         TextView text = (TextView) findViewById(R.id.text_collection);
         text.setText("Referrer: " + Referrers.getReferrer(getIntent()));
