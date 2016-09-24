@@ -38,6 +38,4 @@ if (Referrers.hasReferrer(getIntent())) {
 
 ## For more details on what is the problem with Up Navigation please read [Clear way for exciting Up Navigation](https://medium.com/@amatkivskiy/clear-way-for-exciting-up-navigation-a66153296ae0)
 
-# This is sample project for https://medium.com/@amatkivskiy/clear-way-for-exciting-up-navigation-a66153296ae0
-
 
