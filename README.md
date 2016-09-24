@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/amatkivskiy/complex-up-navigation.svg?branch=master)](https://travis-ci.org/amatkivskiy/complex-up-navigation)
+[![Build Status](https://travis-ci.org/amatkivskiy/complex-up-navigation.svg?branch=master)](https://travis-ci.org/amatkivskiy/flexible-up-navigation)
 
 # Flexible Up Navigation
 This project demonstrates one of the ways how to implement up navigation in Android app when one activity can have multiple parent activities.
